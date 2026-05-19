@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Book {
+  string title = 1;
+  optional string author = 2;
+  optional int64 page_counter = 3;
+}
+
+service Library {
+  rpc checkoutBook(Book) returns (Book) {}
+}
